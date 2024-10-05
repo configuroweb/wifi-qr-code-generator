@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi QR Code Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>WiFi QR Code Generator</h1>
+        <p>Easily share your WiFi credentials</p>
+    </header>
+
+    <div class="container">
+        <form id="wifi-form">
+            <div class="input-group">
+                <label for="ssid">SSID (WiFi Name):</label>
+                <input type="text" id="ssid" placeholder="Enter SSID" required>
+            </div>
+            <div class="input-group">
+                <label for="password">WiFi Password:</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <button type="submit">Generate QR Code</button>
+        </form>
+        <div class="qr-container" id="qr-container" style="display: none;">
+            <h2>Generated QR Code:</h2>
+            <canvas id="qr-code"></canvas>
+            <button id="download-button" style="display: none;">Download QR Code</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>For more <a href="https://appscweb.com" target="_blank">AppsCWeb</a></p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
